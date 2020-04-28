@@ -7,7 +7,6 @@ Redis中包含的数据结构具有一些特殊的属性：
 - Redis关心将数据存储在磁盘上，即使它们正在内存中进行处理。这意味着Redis可以通过内存快速处理，并且在将数据存储在磁盘上时也更安全。
 - 与具有相同数据结构模型的其他语言相比，Redis使用更少的内存
 - Redis提供了全面的功能，例如复制，集群，高可用性
-- ![image-20200418095941196](https://raw.githubusercontent.com/wujianming/MyMD_Pic/matser/master/img/image-20200418095941196.png)
 
 ## 关于Redis集群
 
@@ -21,9 +20,9 @@ Redis集群提供了多个级别的数据分区，允许它们在某些Redis节�
 
 03个节点：
 
-- node01：192.168.10.111
-- node02：192.168.10.112
-- 节点03：192.168.10.113
+- node01：172.16.2.5
+- node02：172.16.2.4
+- 节点03：172.16.2.247
 
 **第一步：下载脚本**
 
@@ -35,9 +34,9 @@ Redis集群提供了多个级别的数据分区，允许它们在某些Redis节�
 
 ```
 cd /opt/
-wget https://github.com/antirez/redis/archive/4.0.11.tar.gz
-tar zxvf 4.0.11.tar.gz
-mv redis-4.0.11 redis
+wget https://github.com/antirez/redis/archive/3.2.13.tar.gz
+tar zxvf 3.2.13.tar.gz
+mv redis-3.2.13 redis
 ```
 
 **步骤2：建立Redis**
@@ -93,8 +92,8 @@ netstat -ntlp
 将**create-cluster**文件的内容复制到其他两个节点
 
 ```
-scp create-cluster root@192.168.10.112:/opt/redis/utils/create-cluster
-scp create-cluster root@192.168.10.113:/opt/redis/utils/create-cluster
+scp create-cluster root@172.16.2.4:/opt/redis/utils/create-cluster
+scp create-cluster root@172.16.2.247:/opt/redis/utils/create-cluster
 ```
 
 **步骤4：在其余2个节点上运行redis**
