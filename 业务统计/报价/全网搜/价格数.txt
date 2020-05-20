@@ -1,0 +1,151 @@
+SELECT
+	v.F_time,
+	sum(v.F_count) AS F_count
+FROM
+	(
+		SELECT
+			't_product_price_0' AS t_product_price,
+			DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+			count(*) AS F_count
+		FROM
+			t_product_price_0
+		GROUP BY
+			F_time
+				UNION  all
+			SELECT
+				't_product_price_1' AS t_product_price,
+				DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+				count(*) AS F_count
+			FROM
+				t_product_price_0
+			GROUP BY
+				F_time
+							UNION  all
+				SELECT
+					't_product_price_2' AS t_product_price,
+					DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+					count(*) AS F_count
+				FROM
+					t_product_price_0
+				GROUP BY
+					F_time
+						UNION all
+					SELECT
+						't_product_price_3' AS t_product_price,
+						DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+						count(*) AS F_count
+					FROM
+						t_product_price_0
+					GROUP BY
+						F_time
+							UNION all
+						SELECT
+							't_product_price_4' AS t_product_price,
+							DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+							count(*) AS F_count
+						FROM
+							t_product_price_0
+						GROUP BY
+							F_time
+								UNION all
+							SELECT
+								't_product_price_5' AS t_product_price,
+								DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+								count(*) AS F_count
+							FROM
+								t_product_price_0
+							GROUP BY
+								F_time
+									UNION all
+								SELECT
+									't_product_price_6' AS t_product_price,
+									DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+									count(*) AS F_count
+								FROM
+									t_product_price_0
+								GROUP BY
+									F_time
+										UNION all
+									SELECT
+										't_product_price_7' AS t_product_price,
+										DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+										count(*) AS F_count
+									FROM
+										t_product_price_0
+									GROUP BY
+										F_time
+											UNION all
+										SELECT
+											't_product_price_8' AS t_product_price,
+											DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+											count(*) AS F_count
+										FROM
+											t_product_price_0
+										GROUP BY
+											F_time
+												UNION all
+											SELECT
+												't_product_price_9' AS t_product_price,
+												DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+												count(*) AS F_count
+											FROM
+												t_product_price_0
+											GROUP BY
+												F_time
+													UNION all
+												SELECT
+													't_product_price_a' AS t_product_price,
+													DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+													count(*) AS F_count
+												FROM
+													t_product_price_0
+												GROUP BY
+													F_time
+														UNION all
+													SELECT
+														't_product_price_b' AS t_product_price,
+														DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+														count(*) AS F_count
+													FROM
+														t_product_price_0
+													GROUP BY
+														F_time
+															UNION all
+														SELECT
+															't_product_price_c' AS t_product_price,
+															DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+															count(*) AS F_count
+														FROM
+															t_product_price_0
+														GROUP BY
+															F_time
+																UNION all
+															SELECT
+																't_product_price_d' AS t_product_price,
+																DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+																count(*) AS F_count
+															FROM
+																t_product_price_0
+															GROUP BY
+																F_time
+																	UNION all
+																SELECT
+																	't_product_price_e' AS t_product_price,
+																	DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+																	count(*) AS F_count
+																FROM
+																	t_product_price_0
+																GROUP BY
+																	F_time
+																		UNION all
+																	SELECT
+																		't_product_price_f' AS t_product_price,
+																		DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+																		count(*) AS F_count
+																	FROM
+																		t_product_price_0
+																	GROUP BY
+																		F_time
+	) v
+GROUP BY
+	v.F_time

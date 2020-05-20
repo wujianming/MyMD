@@ -1,0 +1,151 @@
+SELECT
+	v.F_time,
+	sum(v.F_count) AS F_count
+FROM
+	(
+		SELECT
+			't_product_0' AS t_product,
+			DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+			count(*) AS F_count
+		FROM
+			t_product_0
+		GROUP BY
+			F_time
+		UNION all
+			SELECT
+				't_product_1' AS t_product,
+				DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+				count(*) AS F_count
+			FROM
+				t_product_0
+			GROUP BY
+				F_time
+			UNION all
+				SELECT
+					't_product_2' AS t_product,
+					DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+					count(*) AS F_count
+				FROM
+					t_product_0
+				GROUP BY
+					F_time
+				UNION all
+					SELECT
+						't_product_3' AS t_product,
+						DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+						count(*) AS F_count
+					FROM
+						t_product_0
+					GROUP BY
+						F_time
+					UNION all
+						SELECT
+							't_product_4' AS t_product,
+							DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+							count(*) AS F_count
+						FROM
+							t_product_0
+						GROUP BY
+							F_time
+						UNION all
+							SELECT
+								't_product_5' AS t_product,
+								DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+								count(*) AS F_count
+							FROM
+								t_product_0
+							GROUP BY
+								F_time
+							UNION all
+								SELECT
+									't_product_6' AS t_product,
+									DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+									count(*) AS F_count
+								FROM
+									t_product_0
+								GROUP BY
+									F_time
+								UNION all
+									SELECT
+										't_product_7' AS t_product,
+										DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+										count(*) AS F_count
+									FROM
+										t_product_0
+									GROUP BY
+										F_time
+									UNION all
+										SELECT
+											't_product_8' AS t_product,
+											DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+											count(*) AS F_count
+										FROM
+											t_product_0
+										GROUP BY
+											F_time
+										UNION all
+											SELECT
+												't_product_9' AS t_product,
+												DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+												count(*) AS F_count
+											FROM
+												t_product_0
+											GROUP BY
+												F_time
+											UNION all
+												SELECT
+													't_product_a' AS t_product,
+													DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+													count(*) AS F_count
+												FROM
+													t_product_0
+												GROUP BY
+													F_time
+												UNION all
+													SELECT
+														't_product_b' AS t_product,
+														DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+														count(*) AS F_count
+													FROM
+														t_product_0
+													GROUP BY
+														F_time
+													UNION all
+														SELECT
+															't_product_c' AS t_product,
+															DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+															count(*) AS F_count
+														FROM
+															t_product_0
+														GROUP BY
+															F_time
+														UNION all
+															SELECT
+																't_product_d' AS t_product,
+																DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+																count(*) AS F_count
+															FROM
+																t_product_0
+															GROUP BY
+																F_time
+															UNION all
+																SELECT
+																	't_product_e' AS t_product,
+																	DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+																	count(*) AS F_count
+																FROM
+																	t_product_0
+																GROUP BY
+																	F_time
+																UNION all
+																	SELECT
+																		't_product_f' AS t_product,
+																		DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+																		count(*) AS F_count
+																	FROM
+																		t_product_0
+																	GROUP BY
+																		F_time
+	) v
+GROUP BY
+	v.F_time

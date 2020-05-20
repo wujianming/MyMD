@@ -1,0 +1,151 @@
+SELECT
+	v.F_time,
+	sum(v.F_count) AS F_count
+FROM
+	(
+		SELECT
+			't_product_use_log_m_0' AS t_product_use_log_m,
+			DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+			count(*) AS F_count
+		FROM
+			t_product_use_log_m_0
+		GROUP BY
+			F_time
+		UNION all
+			SELECT
+				't_product_use_log_m_1' AS t_product_use_log_m,
+				DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+				count(*) AS F_count
+			FROM
+				t_product_use_log_m_0
+			GROUP BY
+				F_time
+			UNION all
+				SELECT
+					't_product_use_log_m_2' AS t_product_use_log_m,
+					DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+					count(*) AS F_count
+				FROM
+					t_product_use_log_m_0
+				GROUP BY
+					F_time
+				UNION all
+					SELECT
+						't_product_use_log_m_3' AS t_product_use_log_m,
+						DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+						count(*) AS F_count
+					FROM
+						t_product_use_log_m_0
+					GROUP BY
+						F_time
+					UNION all
+						SELECT
+							't_product_use_log_m_4' AS t_product_use_log_m,
+							DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+							count(*) AS F_count
+						FROM
+							t_product_use_log_m_0
+						GROUP BY
+							F_time
+						UNION all
+							SELECT
+								't_product_use_log_m_5' AS t_product_use_log_m,
+								DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+								count(*) AS F_count
+							FROM
+								t_product_use_log_m_0
+							GROUP BY
+								F_time
+							UNION all
+								SELECT
+									't_product_use_log_m_6' AS t_product_use_log_m,
+									DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+									count(*) AS F_count
+								FROM
+									t_product_use_log_m_0
+								GROUP BY
+									F_time
+								UNION all
+									SELECT
+										't_product_use_log_m_7' AS t_product_use_log_m,
+										DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+										count(*) AS F_count
+									FROM
+										t_product_use_log_m_0
+									GROUP BY
+										F_time
+									UNION all
+										SELECT
+											't_product_use_log_m_8' AS t_product_use_log_m,
+											DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+											count(*) AS F_count
+										FROM
+											t_product_use_log_m_0
+										GROUP BY
+											F_time
+										UNION all
+											SELECT
+												't_product_use_log_m_9' AS t_product_use_log_m,
+												DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+												count(*) AS F_count
+											FROM
+												t_product_use_log_m_0
+											GROUP BY
+												F_time
+											UNION all
+												SELECT
+													't_product_use_log_m_a' AS t_product_use_log_m,
+													DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+													count(*) AS F_count
+												FROM
+													t_product_use_log_m_0
+												GROUP BY
+													F_time
+												UNION all
+													SELECT
+														't_product_use_log_m_b' AS t_product_use_log_m,
+														DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+														count(*) AS F_count
+													FROM
+														t_product_use_log_m_0
+													GROUP BY
+														F_time
+													UNION all
+														SELECT
+															't_product_use_log_m_c' AS t_product_use_log_m,
+															DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+															count(*) AS F_count
+														FROM
+															t_product_use_log_m_0
+														GROUP BY
+															F_time
+														UNION all
+															SELECT
+																't_product_use_log_m_d' AS t_product_use_log_m,
+																DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+																count(*) AS F_count
+															FROM
+																t_product_use_log_m_0
+															GROUP BY
+																F_time
+															UNION all
+																SELECT
+																	't_product_use_log_m_e' AS t_product_use_log_m,
+																	DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+																	count(*) AS F_count
+																FROM
+																	t_product_use_log_m_0
+																GROUP BY
+																	F_time
+																UNION all
+																	SELECT
+																		't_product_use_log_m_f' AS t_product_use_log_m,
+																		DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+																		count(*) AS F_count
+																	FROM
+																		t_product_use_log_m_0
+																	GROUP BY
+																		F_time
+	) v
+GROUP BY
+	v.F_time
