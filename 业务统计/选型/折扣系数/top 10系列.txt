@@ -1,0 +1,187 @@
+SELECT
+	dq123_product2017.Fun_getProductlineName(v.F_ProductLine_ID),
+	count(v.F_ProductLine_ID) AS F_count
+FROM
+	(
+		SELECT
+			*
+		FROM
+			lead_dx2_userdata_4member.t_discount_0
+
+				UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4member.t_discount_1
+	
+				UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4member.t_discount_2
+
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4member.t_discount_3
+
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4member.t_discount_4
+
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4member.t_discount_5
+
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4member.t_discount_6
+
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4member.t_discount_7
+
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4member.t_discount_8
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4member.t_discount_9
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4member.t_discount_a
+		UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4member.t_discount_b
+		
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4member.t_discount_c
+		UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4member.t_discount_d
+		UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4member.t_discount_e
+		UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4member.t_discount_f
+	union ALL
+SELECT
+			*
+		FROM
+			lead_dx2_userdata_4tenant.t_discount_0
+
+				UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4tenant.t_discount_1
+	
+				UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4tenant.t_discount_2
+
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4tenant.t_discount_3
+
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4tenant.t_discount_4
+
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4tenant.t_discount_5
+
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4tenant.t_discount_6
+
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4tenant.t_discount_7
+
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4tenant.t_discount_8
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4tenant.t_discount_9
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4tenant.t_discount_a
+		UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4tenant.t_discount_b
+		
+UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4tenant.t_discount_c
+		UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4tenant.t_discount_d
+		UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4tenant.t_discount_e
+		UNION  all
+			SELECT
+				*
+			FROM
+				lead_dx2_userdata_4tenant.t_discount_f
+			
+										
+	) v
+GROUP BY
+	v.F_ProductLine_ID order by  F_count desc limit 10

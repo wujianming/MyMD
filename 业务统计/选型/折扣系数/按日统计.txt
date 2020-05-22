@@ -1,0 +1,151 @@
+SELECT
+	v.F_time,
+	sum(v.F_count) AS F_count
+FROM
+	(
+		SELECT
+			't_discount_0' AS t_discount,
+			DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+			count(*) AS F_count
+		FROM
+			t_discount_0
+		GROUP BY
+			F_time
+				UNION  all
+			SELECT
+				't_discount_1' AS t_discount,
+				DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+				count(*) AS F_count
+			FROM
+				t_discount_1
+			GROUP BY
+				F_time
+							UNION  all
+				SELECT
+					't_discount_2' AS t_discount,
+					DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+					count(*) AS F_count
+				FROM
+					t_discount_2
+				GROUP BY
+					F_time
+						UNION all
+					SELECT
+						't_discount_3' AS t_discount,
+						DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+						count(*) AS F_count
+					FROM
+						t_discount_3
+					GROUP BY
+						F_time
+							UNION all
+						SELECT
+							't_discount_4' AS t_discount,
+							DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+							count(*) AS F_count
+						FROM
+							t_discount_4
+						GROUP BY
+							F_time
+								UNION all
+							SELECT
+								't_discount_5' AS t_discount,
+								DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+								count(*) AS F_count
+							FROM
+								t_discount_5
+							GROUP BY
+								F_time
+									UNION all
+								SELECT
+									't_discount_6' AS t_discount,
+									DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+									count(*) AS F_count
+								FROM
+									t_discount_6
+								GROUP BY
+									F_time
+										UNION all
+									SELECT
+										't_discount_7' AS t_discount,
+										DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+										count(*) AS F_count
+									FROM
+										t_discount_7
+									GROUP BY
+										F_time
+											UNION all
+										SELECT
+											't_discount_8' AS t_discount,
+											DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+											count(*) AS F_count
+										FROM
+											t_discount_8
+										GROUP BY
+											F_time
+												UNION all
+											SELECT
+												't_discount_9' AS t_discount,
+												DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+												count(*) AS F_count
+											FROM
+												t_discount_9
+											GROUP BY
+												F_time
+													UNION all
+												SELECT
+													't_discount_a' AS t_discount,
+													DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+													count(*) AS F_count
+												FROM
+													t_discount_a
+												GROUP BY
+													F_time
+														UNION all
+													SELECT
+														't_discount_b' AS t_discount,
+														DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+														count(*) AS F_count
+													FROM
+														t_discount_b
+													GROUP BY
+														F_time
+															UNION all
+														SELECT
+															't_discount_c' AS t_discount,
+															DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+															count(*) AS F_count
+														FROM
+															t_discount_c
+														GROUP BY
+															F_time
+																UNION all
+															SELECT
+																't_discount_d' AS t_discount,
+																DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+																count(*) AS F_count
+															FROM
+																t_discount_d
+															GROUP BY
+																F_time
+																	UNION all
+																SELECT
+																	't_discount_e' AS t_discount,
+																	DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+																	count(*) AS F_count
+																FROM
+																	t_discount_e
+																GROUP BY
+																	F_time
+																		UNION all
+																	SELECT
+																		't_discount_f' AS t_discount,
+																		DATE_FORMAT(f_create_time, '%Y-%m-%d') AS F_time,
+																		count(*) AS F_count
+																	FROM
+																		t_discount_f
+																	GROUP BY
+																		F_time
+	) v
+GROUP BY
+	v.F_time
