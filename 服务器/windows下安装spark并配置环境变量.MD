@@ -13,3 +13,16 @@ https://mirrors.tuna.tsinghua.edu.cn/apache/spark/spark-2.4.7/
 
 ### 在控制台输入一下命令：spark-shell
 
+
+
+
+
+# Spark本地运行increase heap size错误解决方案
+
+#### 解决办法三（线上）
+
+spark-defaults.conf文件中配置键值对：
+
+```
+spark.driver.memory              3g
+```
